@@ -1,0 +1,43 @@
+[package]
+name = "kythi-backend"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "api",
+    "configurator",
+    "database",
+] # add new external crates here for syntax highlighting in vscode
+
+[workspace.package]
+version = "0.1.0"          # Bump this when main package is bumped
+authors = ["Evie Fogarty"]
+
+[dependencies] # any relevant dependencies for crates
+actix-web = "4.9.0"
+tokio = { version = "1.43.0", features = ["rt-multi-thread"] }
+config = "0.15.6"
+serde = "1.0.217"
+serde_derive = "1.0.217"
+sea-orm = { version = "1.1.4", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+] }
+
+api = { path = "./api" }
+configurator = { path = "./configurator" }
+database = { path = "./database" }
+
+[workspace.dependencies] # shared dependency versions & features for crates, helps with scalability
+actix-web = "4.9.0"
+tokio = { version = "1.43.0", features = ["rt-multi-thread"] }
+config = "0.15.6"
+serde = "1.0.217"
+serde_derive = "1.0.217"
+sea-orm = { version = "1.1.4", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+] }

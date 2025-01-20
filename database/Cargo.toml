@@ -1,0 +1,16 @@
+[package]
+name = "database"
+description = "A library for handling the database and orm for Kythi."
+edition = "2021"
+version.workspace = true
+authors.workspace = true
+
+[dependencies]
+sea-orm = { workspace = true }
+actix-web = { workspace = true }
+tokio = { workspace = true }
+config = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+
+configurator = { path = "../configurator" }

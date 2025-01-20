@@ -1,0 +1,18 @@
+[package]
+name = "api"
+description = "The main API of kythi"
+edition = "2021"
+
+version.workspace = true
+authors.workspace = true
+
+[dependencies]
+actix-web = { workspace = true }
+tokio = { workspace = true }
+config = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+sea-orm = { workspace = true }
+
+configurator = { path = "../configurator" }
+database = { path = "../database" }

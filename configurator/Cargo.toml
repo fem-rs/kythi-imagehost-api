@@ -1,0 +1,10 @@
+[package]
+name = "configurator"
+edition = "2021"
+version.workspace = true
+authors.workspace = true
+
+[dependencies]
+config = { workspace = true }
+serde_derive = { workspace = true }
+serde = { workspace = true }
