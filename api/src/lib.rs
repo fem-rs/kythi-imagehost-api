@@ -1,7 +1,11 @@
 use std::io::Error;
 
 use actix_web::{web::Data, App, HttpServer};
+
 use database;
+
+pub mod infrastructure;
+pub mod routes;
 
 pub async fn run(config: configurator::Settings) -> Result<(), Error> {
     let server_config = (config.server.ip, config.server.port);
@@ -12,7 +16,7 @@ pub async fn run(config: configurator::Settings) -> Result<(), Error> {
 
     HttpServer::new(move || {
         App::new().app_data(Data::new(db_conn.clone()))
-        // sTODO: ervice here...
+        // TODO: services here...
     })
     .bind(server_config)?
     .run()

@@ -13,6 +13,10 @@ config = { workspace = true }
 serde = { workspace = true }
 serde_derive = { workspace = true }
 sea-orm = { workspace = true }
+actix-di = { workspace = true }
+async-trait = { workspace = true }
+
 
 configurator = { path = "../configurator" }
 database = { path = "../database" }
+entity = { path = "../entity" }

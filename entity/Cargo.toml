@@ -1,0 +1,11 @@
+[package]
+name = "entity"
+edition = "2021"
+version.workspace = true
+authors.workspace = true
+
+[dependencies]
+sea-orm = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+serde_derive = { workspace = true }
